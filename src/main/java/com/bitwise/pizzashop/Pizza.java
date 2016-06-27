@@ -2,26 +2,27 @@ package com.bitwise.pizzashop;
 
 public class Pizza extends Item {
 	
-	private String size;
+	//private String size;
 	private Topping[] defaultToppings;
 	private Crust defaultCrust;
 	
 	
-	public Pizza(String name, double price, String size, Topping[] defaultToppings,Crust defaultCrust) {
-		super(name,price);
+	public Pizza(String name, Topping[] defaultToppings,Crust defaultCrust) {
+		super(name);
 		
-		this.size=size;
+        //this.size= size;
 		this.defaultCrust=defaultCrust;
 		this.defaultToppings=defaultToppings;
+
 	}
 	
 	
-	public String getSize() {
+/*	public String getSize() {
 		return size;
 	}
 	public void setSize(String size) {
 		this.size = size;
-	}
+	}*/
 	
 	public Crust getDefaultCrust() {
 		return defaultCrust;
@@ -45,5 +46,7 @@ public class Pizza extends Item {
 	public double getItemPrice() {
 		return getPrice();
 	}
+	
+
 
 }

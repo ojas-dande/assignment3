@@ -9,6 +9,7 @@ public class PizzaMenu {
 	private static HashMap<String,Pizza> pizzaMap = new HashMap<String,Pizza>();
 	private static HashMap<String,Topping> toppingMap = new HashMap<String,Topping>();
 	private static HashMap<String,Crust> crustMap = new HashMap<String,Crust>();
+	private static HashMap<String,Size> sizeMap = new HashMap<String,Size>();
 	
 	public static void addPizzaToMenu(String pizzaName, Pizza pizza){
 		if(pizza != null)
@@ -46,6 +47,19 @@ public class PizzaMenu {
 	public static Crust getCrustFromMenu(String crustName){
 		
 			return crustMap.get(crustName);
+				
+	}
+	
+	public static void addPizzaSizePriceToMenu(String sizeOfPiz, Size size){
+		if(size != null)
+			sizeMap.put(sizeOfPiz, size);
+		
+			
+	}
+	
+	public static Size getPizzaSizePriceToMenu(String sizeOfPiz){
+		
+			return sizeMap.get(sizeOfPiz);
 				
 	}
 
